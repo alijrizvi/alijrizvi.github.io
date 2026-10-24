@@ -1,14 +1,363 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ali-j--rizvi---pro-portfolio-site</title>
-    <script type="module" crossorigin src="/assets/index-B7s3Lyga.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-wBE2t2IU.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Rizvi — AI Data Scientist & ML Systems Architect</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0a0d14',
+                        surface: '#121722',
+                        card: '#1a2130',
+                        brand: '#3b82f6',
+                        brandGlow: '#2563eb',
+                        accent: '#f59e0b',
+                        borderDark: '#263044'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0d14; }
+        ::-webkit-scrollbar-thumb { background: #263044; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+    </style>
+</head>
+<body class="bg-obsidian text-slate-300 font-sans antialiased selection:bg-brand selection:text-white min-h-screen">
+
+    <!-- Top Badge -->
+    <div class="w-full bg-slate-950/80 border-b border-borderDark/60 backdrop-blur-md px-6 py-2 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-2 text-xs font-mono text-slate-400">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>San Antonio, TX &bull; Available for Enterprise & Freelance Consultations</span>
+        </div>
+        <div class="flex items-center space-x-2 text-xs font-mono bg-surface/80 border border-borderDark px-3 py-1 rounded-full text-slate-400">
+            <i class="fa-solid fa-bolt text-amber-400 text-[10px]"></i>
+            <span>Powered by <strong class="text-slate-200">Google Gemini & Antigravity</strong></span>
+        </div>
+    </div>
+
+    <!-- Main Container Layout (2-Column Grid) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+
+            <!-- ================= LEFT COLUMN: STICKY PROFILE & CREDENTIALS ================= -->
+            <aside class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-20 lg:self-start space-y-6">
+                <div class="bg-surface/90 border border-borderDark p-6 sm:p-8 rounded-2xl shadow-xl space-y-6 backdrop-blur-sm">
+                    
+                    <!-- Headshot & Name -->
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="relative group">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r from-brand to-cyan-500 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-300"></div>
+                            <!-- Replace with your actual photo path e.g., 'profile.jpg' or GitHub avatar URL -->
+                            <img src="https://avatars.githubusercontent.com/u/alijrizvi?v=4" 
+                                 onerror="this.src='https://ui-avatars.com/api/?name=Ali+Rizvi&background=1a2130&color=3b82f6&size=200'"
+                                 alt="Ali Rizvi" 
+                                 class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-2 border-slate-800 shadow-md">
+                        </div>
+                        <div>
+                            <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Ali Rizvi</h1>
+                            <p class="text-brand font-medium text-sm sm:text-base mt-1">Lead Data Scientist & AI Architect</p>
+                            <p class="text-xs text-slate-400 font-mono mt-0.5">M.S. Data Science &bull; Eastern University</p>
+                        </div>
+                    </div>
+
+                    <hr class="border-borderDark">
+
+                    <!-- Custom Bio (The Refined Trajectory) -->
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <p>
+                            My analytical path began with a <strong class="text-white">B.A. in Medical Humanities & Pre-Medicine</strong>, cultivating a rigorous scientific framework grounded in the critical, expressive, and first-principles thinking of the liberal arts.
+                        </p>
+                        <p>
+                            Elevating that foundation with an <strong class="text-white">M.S. in Data Science</strong>, I translated scientific rigor into technical mastery across statistics, predictive modeling, and production AI engineering.
+                        </p>
+                        <p class="text-slate-400 italic">
+                            This protean background enables me to analyze complex systems with mathematical precision while bringing broad, creative problem-solving to any business domain.
+                        </p>
+                    </div>
+
+                    <hr class="border-borderDark">
+
+                    <!-- Core Stack Tags -->
+                    <div>
+                        <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3">Tri-Pillar Arsenal</h3>
+                        <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">Python / SQL</span>
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">XGBoost / Random Forest</span>
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">ANOVA / Chi-Squared</span>
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">RAG / MCP Servers</span>
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">Streamlit / DuckDB</span>
+                            <span class="px-2 py-1 rounded bg-slate-800 border border-borderDark text-blue-300">Time Series (ARIMA)</span>
+                        </div>
+                    </div>
+
+                    <!-- Connect / CTAs -->
+                    <div class="space-y-2 pt-2">
+                        <a href="https://www.upwork.com" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-semibold text-xs py-2.5 px-4 rounded-xl shadow-lg transition duration-200">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Hire Me on Upwork</span>
+                        </a>
+                        <div class="grid grid-cols-3 gap-2 pt-1 text-center font-mono text-xs">
+                            <a href="https://github.com/alijrizvi" target="_blank" class="bg-card hover:bg-slate-700 border border-borderDark py-2 rounded-lg text-slate-300 hover:text-white transition">
+                                <i class="fa-brands fa-github text-sm"></i><span class="block text-[10px] mt-0.5">GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="bg-card hover:bg-slate-700 border border-borderDark py-2 rounded-lg text-slate-300 hover:text-white transition">
+                                <i class="fa-brands fa-linkedin text-sm"></i><span class="block text-[10px] mt-0.5">LinkedIn</span>
+                            </a>
+                            <a href="https://medium.com/@alijrizvi" target="_blank" class="bg-card hover:bg-slate-700 border border-borderDark py-2 rounded-lg text-slate-300 hover:text-white transition">
+                                <i class="fa-brands fa-medium text-sm"></i><span class="block text-[10px] mt-0.5">Medium</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- ================= RIGHT COLUMN: INTERACTIVE WORK SHOWCASE ================= -->
+            <section class="lg:col-span-7 xl:col-span-8 space-y-6">
+                
+                <!-- Section Header & Filter Toggles -->
+                <div class="bg-surface/90 border border-borderDark p-5 rounded-2xl shadow-lg backdrop-blur-sm space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <h2 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                            <i class="fa-solid fa-cubes text-brand"></i>
+                            <span>Featured Portfolio Projects</span>
+                        </h2>
+                        <span class="text-xs font-mono text-slate-400">Click a category to filter</span>
+                    </div>
+
+                    <!-- Category Buttons -->
+                    <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+                        <button onclick="filterProjects('all')" id="btn-all" class="filter-btn active px-3 py-1.5 rounded-lg border bg-brand border-brand text-white transition">
+                            All Work
+                        </button>
+                        <button onclick="filterProjects('ai')" id="btn-ai" class="filter-btn px-3 py-1.5 rounded-lg border bg-card border-borderDark text-slate-300 hover:border-brand hover:text-white transition">
+                            🤖 Intelligent AI Systems
+                        </button>
+                        <button onclick="filterProjects('stats')" id="btn-stats" class="filter-btn px-3 py-1.5 rounded-lg border bg-card border-borderDark text-slate-300 hover:border-brand hover:text-white transition">
+                            📊 Applied Stats & Analytics
+                        </button>
+                        <button onclick="filterProjects('de')" id="btn-de" class="filter-btn px-3 py-1.5 rounded-lg border bg-card border-borderDark text-slate-300 hover:border-brand hover:text-white transition">
+                            ⚙️ Data Engineering & Pipelines
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARDS LIST -->
+                <div class="space-y-6">
+
+                    <!-- PROJECT 1: AI Retail Copilot -->
+                    <article class="project-card ai de bg-surface border border-borderDark hover:border-brand/60 rounded-2xl p-6 shadow-xl transition-all duration-200 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-blue-950 text-blue-400 border border-blue-800/50 mb-2">
+                                    Flagship AI Copilot
+                                </span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white hover:text-brand transition">
+                                    <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank">
+                                        AI-Powered Retail Analytics: An End-to-End Decision Intelligence Copilot
+                                    </a>
+                                </h3>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400 whitespace-nowrap">Retail & E-Commerce</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Engineered an interactive Streamlit application powered by DuckDB, ARIMA/LSTM time-series forecasting, and a local LLM decision interface. Automatically converts raw SQL sales feeds into dynamic pricing recommendations and revenue optimization advice.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Time Series (ARIMA/LSTM)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">DuckDB</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Streamlit</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Local LLMs (Ollama)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Dynamic Pricing</span>
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between border-t border-borderDark/60 text-xs font-mono">
+                            <span class="text-emerald-400"><i class="fa-solid fa-chart-line"></i> Automated Pricing Insights</span>
+                            <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank" class="text-brand hover:underline flex items-center gap-1">
+                                <span>Read Case Study</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2: Enterprise Churn Predictor -->
+                    <article class="project-card stats bg-surface border border-borderDark hover:border-brand/60 rounded-2xl p-6 shadow-xl transition-all duration-200 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800/50 mb-2">
+                                    Predictive ML & Decision Science
+                                </span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white hover:text-brand transition">
+                                    <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank">
+                                        Enterprise Customer Churn Predictor: Agile PM & Statistical Modeling
+                                    </a>
+                                </h3>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400 whitespace-nowrap">Enterprise B2B</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Built an enterprise churn prediction model deploying XGBoost and Random Forest algorithms. Validated feature impacts using ANOVA and A/B hypothesis testing to quantify customer lifetime value (LTV) risk and retention opportunities.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">XGBoost</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Random Forests</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">ANOVA & A/B Testing</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Agile PM</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Customer LTV</span>
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between border-t border-borderDark/60 text-xs font-mono">
+                            <span class="text-emerald-400"><i class="fa-solid fa-shield-halved"></i> Retention Lift Focus</span>
+                            <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank" class="text-brand hover:underline flex items-center gap-1">
+                                <span>Read Case Study</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3: Biostatistical Cancer Analytics -->
+                    <article class="project-card stats bg-surface border border-borderDark hover:border-brand/60 rounded-2xl p-6 shadow-xl transition-all duration-200 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-amber-950 text-amber-400 border border-amber-800/50 mb-2">
+                                    Biostatistics & Multivariate Analysis
+                                </span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white hover:text-brand transition">
+                                    <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank">
+                                        A Biostatistical Approach to Breast Cancer Analytics & Modeling
+                                    </a>
+                                </h3>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400 whitespace-nowrap">Healthcare Analytics</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Applied Principal Component Analysis (PCA) for high-dimensional feature reduction, combined with L1/L2 Regularized Logistic Regression and Chi-Squared goodness-of-fit testing to isolate high-confidence diagnostic predictors.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">PCA Dimensionality Reduction</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Logistic Regression (L1/L2)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Chi-Squared Tests</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Biostatistics</span>
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between border-t border-borderDark/60 text-xs font-mono">
+                            <span class="text-emerald-400"><i class="fa-solid fa-microscope"></i> High-Precision Feature Selection</span>
+                            <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank" class="text-brand hover:underline flex items-center gap-1">
+                                <span>Read Case Study</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 4: AI Engineer Blueprint -->
+                    <article class="project-card ai de bg-surface border border-borderDark hover:border-brand/60 rounded-2xl p-6 shadow-xl transition-all duration-200 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-mono font-semibold bg-purple-950 text-purple-400 border border-purple-800/50 mb-2">
+                                    Systems Architecture & LLM Engineering
+                                </span>
+                                <h3 class="text-lg sm:text-xl font-bold text-white hover:text-brand transition">
+                                    <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank">
+                                        The AI Engineer Blueprint: Bridging Data Science & Production LLMs
+                                    </a>
+                                </h3>
+                            </div>
+                            <span class="text-xs font-mono text-slate-400 whitespace-nowrap">AI Engineering</span>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Comprehensive technical framework detailing production RAG architectures, Model Context Protocol (MCP) server integration, and asynchronous Claude/Ollama API orchestration for enterprise AI deployments.
+                        </p>
+
+                        <!-- Skill Tags -->
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-300">
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Model Context Protocol (MCP)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">RAG Pipelines</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Ollama & Claude API</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-800 border border-borderDark">Systems Engineering</span>
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between border-t border-borderDark/60 text-xs font-mono">
+                            <span class="text-purple-400"><i class="fa-solid fa-network-wired"></i> Full-Stack AI Architecture</span>
+                            <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank" class="text-brand hover:underline flex items-center gap-1">
+                                <span>Read Case Study</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Footer Callout link to full Medium list -->
+                <div class="bg-card/60 border border-borderDark rounded-2xl p-6 text-center space-y-3">
+                    <p class="text-sm text-slate-300">
+                        Looking for my complete list of published research, SQL scripts, and statistical notebooks?
+                    </p>
+                    <a href="https://medium.com/@alijrizvi/list/data-science-machine-learning-ai-36776666bcd5" target="_blank" class="inline-flex items-center space-x-2 bg-brand hover:bg-brandGlow text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition shadow-md">
+                        <span>Explore Complete Portfolio List on Medium</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 py-8 border-t border-borderDark/60 text-center text-xs font-mono text-slate-400">
+        <p>&copy; 2026 Ali Rizvi. Built with Tailwind CSS & Google Gemini.</p>
+    </footer>
+
+    <!-- Filter Script -->
+    <script>
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Reset button active styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand', 'text-white', 'border-brand');
+                btn.classList.add('bg-card', 'text-slate-300', 'border-borderDark');
+            });
+
+            // Set current button active
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-card', 'text-slate-300', 'border-borderDark');
+                activeBtn.classList.add('bg-brand', 'text-white', 'border-brand');
+            }
+
+            // Show/Hide project cards based on class tags
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
 </html>
