@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Rizvi | AI Data Scientist</title>
+    <title>Ali Rizvi — AI Data Scientist & ML Systems Architect</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,7 +17,7 @@
                         navyAccent: '#2563eb',  /* Vibrant Tech Navy Blue */
                         textPrimary: '#0f172a', /* Dark Obsidian Text */
                         textMuted: '#475569',   /* Slate Muted Text */
-                        borderLight: '#e2e8f0' /* Crisp Light Border */
+                        borderLight: '#e2e8f0'  /* Crisp Light Border */
                     }
                 }
             }
@@ -26,7 +26,10 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom clean scrollbar for light theme */
+        /* Hide scrollbar for clean filter row while keeping scrollability */
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+        .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+        
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #f8fafc; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
@@ -53,93 +56,96 @@
     </div>
 
     <!-- Main Container Layout (2-Column Grid) -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
 
             <!-- ================= LEFT COLUMN: STICKY PROFILE & CREDENTIALS ================= -->
-            <aside class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-20 lg:self-start space-y-6">
-                <div class="bg-surfaceBg border border-borderLight p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition space-y-6">
+            <aside class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-20 lg:self-start space-y-5">
+                <div class="bg-surfaceBg border border-borderLight p-6 sm:p-7 rounded-2xl shadow-sm hover:shadow-md transition space-y-4">
                     
-                    <!-- Headshot & Name -->
-                    <div class="relative group w-full max-w-[220px] mx-auto">
-                        <div class="absolute -inset-0.5 bg-gradient-to-r from-navyPrimary to-navyAccent rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
-                        <img src="headshot.jpg" 
-                             onerror="this.src='https://ui-avatars.com/api/?name=Ali+Rizvi&background=1e3a8a&color=ffffff&size=300'"
-                             alt="Ali Rizvi" 
-                             class="relative w-full aspect-square rounded-2xl object-cover object-center border border-slate-200 shadow-md">
-                    </div>
-                        <div>
+                    <!-- Headshot & Profile Header (Left Aligned) -->
+                    <div class="space-y-3">
+                        <div class="relative group w-full max-w-[200px]">
+                            <div class="absolute -inset-0.5 bg-gradient-to-r from-navyPrimary to-navyAccent rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                            <img src="headshot.jpg" 
+                                 onerror="this.src='https://ui-avatars.com/api/?name=Ali+Rizvi&background=1e3a8a&color=ffffff&size=300'"
+                                 alt="Ali Rizvi" 
+                                 class="relative w-full aspect-square rounded-2xl object-cover object-center border border-slate-200 shadow-md">
+                        </div>
+
+                        <div class="text-left space-y-1">
                             <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Ali Rizvi</h1>
-                            
-                            <!-- Single-line Title -->
-                            <p class="text-navyAccent font-semibold text-xs sm:text-sm mt-1 whitespace-nowrap">
+                            <p class="text-navyAccent font-semibold text-xs sm:text-sm whitespace-nowrap">
                                 Market Analyst at <span class="italic font-bold">Apartment MarketData</span>
                             </p>
-                            
-                            <!-- M.S. Line -->
-                            <p class="text-xs text-slate-600 font-mono font-medium mt-1">M.S. Data Science</p>
-                        
-                            <!-- Certifications Row (Matching Font & Updated Icons) -->
-                            <div class="flex items-center justify-center space-x-2 mt-2 pt-1">
+                            <p class="text-xs text-slate-600 font-mono font-medium">M.S. Data Science</p>
+
+                            <!-- Left-Aligned Certifications Row with SVG Logos -->
+                            <div class="flex items-center space-x-2 pt-1">
                                 <span class="text-xs text-slate-600 font-mono font-medium">Certifications</span>
-                                <div class="flex items-center space-x-2 text-slate-700 text-xs">
+                                <div class="flex items-center space-x-2.5 text-slate-800">
                                     <!-- 1. Google -->
-                                    <i class="fa-brands fa-google hover:text-blue-600 transition" title="Google Analytics Certified"></i>
+                                    <i class="fa-brands fa-google hover:text-blue-600 transition text-xs" title="Google Analytics Certified"></i>
                                     
-                                    <!-- 2. IBM (Custom Inline SVG for official 8-bar IBM logo look) -->
-                                    <svg class="w-3.5 h-3.5 fill-current hover:text-blue-700 transition" viewBox="0 0 24 24" title="IBM Certified">
-                                        <path d="M0 4h6v2H0V4zm0 4h6v2H0V8zm0 4h6v2H0v-2zm0 4h6v2H0v-2zm9-12h6v2H9V4zm0 4h6v2H9V8zm0 4h6v2H9v-2zm0 4h6v2H9v-2zm9-12h6v2h-6V4zm0 4h6v2h-6V8zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2z"/>
+                                    <!-- 2. IBM (Official 8-Bar SVG Logo) -->
+                                    <svg class="w-4 h-3.5 fill-current hover:text-blue-700 transition" viewBox="0 0 24 16" title="IBM Certified">
+                                        <path d="M0 0h5v2H0V0zm0 3.5h5v2H0v-2zm0 3.5h5v2H0V7zm0 3.5h5v2H0v-2zm0 3.5h5v2H0v-2zm7-14h5v2H7V0zm0 3.5h5v2H7v-2zm0 3.5h5v2H7V7zm0 3.5h5v2H7v-2zm0 3.5h5v2H7v-2zm7-14h10v2H14V0zm0 3.5h10v2H14v-2zm0 3.5h10v2H14V7zm0 3.5h10v2H14v-2zm0 3.5h10v2H14v-2z"/>
                                     </svg>
                                     
                                     <!-- 3. AWS -->
                                     <i class="fa-brands fa-aws hover:text-amber-600 transition text-sm" title="AWS Cloud Practitioner"></i>
                                     
-                                    <!-- 4. Databricks (Layered Stack) -->
-                                    <i class="fa-solid fa-layer-group hover:text-red-600 transition" title="Databricks GenAI Certified"></i>
+                                    <!-- 4. Databricks (Official Layered Geometry SVG) -->
+                                    <svg class="w-3.5 h-3.5 fill-current hover:text-red-600 transition" viewBox="0 0 24 24" title="Databricks GenAI Certified">
+                                        <path d="M19 6l-7-4-7 4 7 4 7-4zm0 4l-7 4-7-4v2.5l7 4 7-4V10zm0 4l-7 4-7-4v2.5l7 4 7-4V14z"/>
+                                    </svg>
                                     
-                                    <!-- 5. Claude / Anthropic (Sparkle/Asterisk Splash) -->
-                                    <i class="fa-solid fa-asterisk hover:text-amber-600 transition text-[11px]" title="Claude / RAG & MCP Systems"></i>
+                                    <!-- 5. Claude / Anthropic (Official Multi-Spoke Splash SVG) -->
+                                    <svg class="w-3.5 h-3.5 fill-current hover:text-amber-600 transition" viewBox="0 0 24 24" title="Claude / RAG & MCP Systems">
+                                        <path d="M12 0l2.5 8.5L23 11l-8.5 2.5L12 22l-2.5-8.5L1 11l8.5-2.5L12 0zm0 4.5L10.3 10 4.8 11.7l5.5 1.7L12 18.9l1.7-5.5 5.5-1.7-5.5-1.7L12 4.5z"/>
+                                    </svg>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                    <hr class="border-borderLight">
+                    <hr class="border-borderLight my-3">
 
-                    <!-- Custom Bio (The Refined Trajectory) -->
-                    <div class="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        </p>
-                        <p class="text-slate-500 italic">
+                    <!-- Custom Bio -->
+                    <div class="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-2">
+                        <p class="italic">
                             Armed with a protean background cultivating a rigorous scientific framework while being grounded in the critical, first-principles thinking of the liberal arts, I analyze and optimize complex systems with mathematical precision and creativity alike.
                         </p>
                     </div>
 
-                    <hr class="border-borderLight">
+                    <hr class="border-borderLight my-3">
 
-                    <!-- Core Stack Tags -->
+                    <!-- Core Stack Tags (Compact & Fitted) -->
                     <div>
-                        <h3 class="text-xs font-mono uppercase tracking-wider text-slate-500 mb-3 font-semibold">Technical Stack</h3>
-                        <div class="flex flex-wrap gap-1.5 text-xs font-mono">
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Python / SQL</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Linear / Logistic Regression</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">XGBoost / Random Forest</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">PCA / K-Means Clustering</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">A/B / Hypothesis Testing: ANOVA / Chi-Squared</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Cloud Data Platforms (Snowflake / Databricks / GCP)</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">LLM Copilots / RAG / MCP Servers</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">MLOps</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Streamlit / DuckDB</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Time Series (ARIMA / LSTM / Prophet)</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800 font-medium">Tableau / PowerBI</span>
+                        <h3 class="text-xs font-mono uppercase tracking-wider text-slate-500 font-semibold mb-2">Technical Stack</h3>
+                        <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Python / SQL</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Linear / Logistic Regression</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">XGBoost / Random Forest</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">PCA / K-Means Clustering</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">A/B Testing: ANOVA / Chi-Squared</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Cloud: Snowflake / Databricks / GCP</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">LLM Copilots / RAG / MCP</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">MLOps</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Streamlit / DuckDB</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Time Series (ARIMA / LSTM)</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-800 font-medium">Tableau / PowerBI</span>
                         </div>
                     </div>
 
                     <!-- Connect / CTAs -->
-                    <div class="space-y-2 pt-2">
-                        <a href="https://www.upwork.com/freelancers/~018918e835fbfbd05b" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs py-2.5 px-4 rounded-xl shadow transition duration-200">
+                    <div class="space-y-2.5 pt-2">
+                        <!-- Vertically Enlarged Hire Me Button -->
+                        <a href="https://www.upwork.com" target="_blank" class="w-full flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm py-3.5 px-4 rounded-xl shadow-md transition duration-200">
                             <i class="fa-solid fa-briefcase"></i>
                             <span>Hire Me on Upwork</span>
                         </a>
-                        <div class="grid grid-cols-3 gap-2 pt-1 text-center font-mono text-xs">
+                        <div class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
                             <a href="https://github.com/alijrizvi" target="_blank" class="bg-slate-50 hover:bg-slate-100 border border-slate-200 py-2 rounded-lg text-slate-700 hover:text-navyPrimary transition">
                                 <i class="fa-brands fa-github text-sm"></i><span class="block text-[10px] mt-0.5">GitHub</span>
                             </a>
@@ -160,25 +166,25 @@
                 
                 <!-- Section Header & Filter Toggles -->
                 <div class="bg-surfaceBg border border-borderLight p-5 rounded-2xl shadow-sm space-y-4">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
                         <h2 class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
                             <i class="fa-solid fa-cubes text-navyPrimary"></i>
                             <span>Featured Portfolio Projects</span>
                         </h2>
                     </div>
 
-                    <!-- Category Buttons -->
-                    <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
-                        <button onclick="filterProjects('all')" id="btn-all" class="filter-btn active px-2.0 py-1.5 rounded-lg border bg-navyPrimary border-navyPrimary text-white shadow-sm transition">
+                    <!-- Category Buttons (Forced Single Row with Breathing Room) -->
+                    <div class="flex items-center gap-2 pt-1 font-mono text-xs overflow-x-auto whitespace-nowrap scrollbar-none">
+                        <button onclick="filterProjects('all')" id="btn-all" class="filter-btn active px-3.5 py-2 rounded-lg border bg-navyPrimary border-navyPrimary text-white shadow-sm transition shrink-0 font-medium">
                             All Work
                         </button>
-                        <button onclick="filterProjects('ai')" id="btn-ai" class="filter-btn px-2.0 py-1.8 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition">
+                        <button onclick="filterProjects('ai')" id="btn-ai" class="filter-btn px-3.5 py-2 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition shrink-0 font-medium">
                             🤖 Intelligent AI Systems
                         </button>
-                        <button onclick="filterProjects('stats')" id="btn-stats" class="filter-btn px-2.0 py-1.5 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition">
+                        <button onclick="filterProjects('stats')" id="btn-stats" class="filter-btn px-3.5 py-2 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition shrink-0 font-medium">
                             📊 Applied Stats & Analytics
                         </button>
-                        <button onclick="filterProjects('de')" id="btn-de" class="filter-btn px-2.0 py-1.5 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition">
+                        <button onclick="filterProjects('de')" id="btn-de" class="filter-btn px-3.5 py-2 rounded-lg border bg-slate-50 border-slate-200 text-slate-700 hover:border-navyPrimary hover:text-navyPrimary transition shrink-0 font-medium">
                             ⚙️ Data Engineering & Pipelines
                         </button>
                     </div>
